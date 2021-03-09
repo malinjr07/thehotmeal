@@ -73,38 +73,40 @@
     -webkit-animation: @string;
     -moz-animation: @string;
     -ms-animation: @string;
+    animation: @string;
 }
 
 .keyframes(@keyframeName; @animationProperties) {
     @-moz-keyframes @keyframeName {
         @animationProperties();
-    };
+    }
 
     @-webkit-keyframes @keyframeName {
         @animationProperties();
-    };
+    }
 
     @keyframes @keyframeName {
         @animationProperties();
-    };
+    }
 
     @-webkit-keyframes @keyframeName {
         @animationProperties();
-    };
+    }
 
     @-moz-keyframes @keyframeName {
         @animationProperties();
-    };
+    }
 
     @-ms-keyframes @keyframeName {
         @animationProperties();
-    };
+    }
 
     @-o-keyframes @keyframeName {
         @animationProperties();
-    };
+    }
 
     @keyframes @keyframeName {
         @animationProperties();
     };
+
 }
