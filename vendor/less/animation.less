@@ -1,0 +1,22 @@
+@import "mixin.less";
+
+.banner-img {
+    width: 50%;
+    height: 50vh;
+    margin: 10%;
+}
+
+#right-hand {
+    .keyframes(rightHand; {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        };
+
+    );
+    .animation(rightHand 2s linear infinite);
+}

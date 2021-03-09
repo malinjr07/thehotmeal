@@ -1,0 +1,74 @@
+.banner-img {
+  width: 50%;
+  height: 50vh;
+  margin: 10%;
+}
+#right-hand {
+  -webkit-animation: rightHand 2s linear infinite;
+  -moz-animation: rightHand 2s linear infinite;
+  -ms-animation: rightHand 2s linear infinite;
+}
+@-moz-keyframes rightHand {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rightHand {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rightHand {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rightHand {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes rightHand {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes rightHand {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes rightHand {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rightHand {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
