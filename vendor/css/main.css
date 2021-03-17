@@ -1,3 +1,6 @@
+/* Color Variables */
+/* Single color #DFDFDF #000000 #272727 #4E4E4E */
+/* Font Sizes & Weights */
 * {
   padding: 0;
   margin: 0;
@@ -39,10 +42,97 @@ ul {
   margin: 0;
 }
 @font-face {
-  font-family: extrabold;
+  font-family: Gilroy-ExtraBold;
   src: url(../webfonts/Gilroy-ExtraBold.otf);
 }
 @font-face {
-  font-family: light;
+  font-family: Gilroy-Light;
   src: url(../webfonts/Gilroy-Light.otf);
+}
+.bold {
+  font-family: Gilroy-ExtraBold;
+}
+.light {
+  font-family: Gilroy-Light;
+}
+body {
+  background: #F8F8F8;
+}
+.btn-ui {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  font-family: Gilroy-ExtraBold;
+  padding: 11px 19px 11px 17px;
+  background: #ffffff;
+  border: transparent;
+  color: #292d34;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.btn-ui:hover {
+  background: #df2c65 !important;
+  color: #ffffff;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+}
+header nav.navbar {
+  padding: 0 35px;
+}
+header nav.navbar .navbar-brand {
+  padding: 0;
+  margin-top: -18px;
+}
+header nav.navbar .navbar-nav {
+  padding: 14px 0 19px;
+}
+header nav.navbar .navbar-nav .nav-item .nav-link {
+  padding: 18px 39px;
+  font-family: Gilroy-ExtraBold;
+  font-size: 14px;
+  color: #272727;
+  line-height: 1.2;
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+header nav.navbar .navbar-nav .nav-item .nav-link:hover {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+header nav.navbar .navbar-nav .nav-item.active .nav-link {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+header nav.navbar .btn-grp {
+  padding-left: 43px;
+}
+header nav.navbar .btn-grp .btns {
+  float: left;
+  padding: 0 20px;
+}
+.hero-section .hero-banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 730px;
+  height: 700px;
 }

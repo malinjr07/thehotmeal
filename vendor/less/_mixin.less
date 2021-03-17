@@ -2,10 +2,10 @@
     text-shadow: @string;
 }
 
-.shadow (@string) {
-    -webkit-box-shadow: @string;
-    -moz-box-shadow: @string;
-    box-shadow: @string;
+.shadow (@s) {
+    -webkit-box-shadow: @s;
+    -moz-box-shadow: @s;
+    box-shadow: @s;
 }
 
 .innerShadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
@@ -35,6 +35,7 @@
     -moz-transition: @transition;
     -ms-transition: @transition;
     -o-transition: @transition;
+    transition: @transition;
 }
 
 .transform(@string) {
@@ -42,6 +43,7 @@
     -moz-transform: @string;
     -ms-transform: @string;
     -o-transform: @string;
+    transform: @string;
 }
 
 .transform-origin (@x: center) {
@@ -49,6 +51,7 @@
     -moz-transform-origin: @x;
     -ms-transform-origin: @x;
     -o-transform-origin: @x;
+    transform-origin: @x;
 }
 
 .gradient (@startColor: #eee, @endColor: white) {
@@ -85,28 +88,17 @@
         @animationProperties();
     }
 
-    @keyframes @keyframeName {
-        @animationProperties();
-    }
-
-    @-webkit-keyframes @keyframeName {
-        @animationProperties();
-    }
-
-    @-moz-keyframes @keyframeName {
-        @animationProperties();
-    }
-
+    
     @-ms-keyframes @keyframeName {
         @animationProperties();
     }
-
+    
     @-o-keyframes @keyframeName {
         @animationProperties();
-    }
+    };
 
     @keyframes @keyframeName {
         @animationProperties();
-    };
+    }
 
 }
