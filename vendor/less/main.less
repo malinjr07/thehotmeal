@@ -2,49 +2,22 @@
 @import "_variables.less";
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     outline: 0;
 }
 
-textarea {
-    resize: none;
-}
-
-ol,
-ul {
+ul,
+ol {
     list-style-type: none;
 }
 
-a,
-a:hover {
+a {
     text-decoration: none;
 }
 
 img {
     vertical-align: middle;
-}
-
-.btn,
-a,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-i,
-img,
-input,
-label,
-li,
-ol,
-p,
-span,
-ul {
-    padding: 0;
-    margin: 0;
 }
 
 @font-face {
@@ -57,90 +30,226 @@ ul {
     src: url(../webfonts/Gilroy-Light.otf);
 }
 
-.bold {
-    font-family: Gilroy-ExtraBold;
-}
 
-.light {
-    font-family: Gilroy-Light;
+.clr {
+    clear: both;
 }
 
 body {
     background: #F8F8F8;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.btn-ui {
-    .radius(6px);
+.bold {
+    font-family: Gilroy-ExtraBold;
+    font-weight: 800;
+}
+
+.light {
+    font-family: Gilroy-Light;
+    font-weight: 300;
+}
+
+h3 {
     .bold;
-    padding: 11px 19px 11px 17px;
-    background: @white;
-    border: transparent;
-    color: @black;
-    .transition(0.4s);
-
-    &:hover {
-        background: @pink  !important;
-        color: @white;
-    }
+    font-size: @xl;
 }
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: transparent;
-    nav.navbar {
-        padding: 0 35px;
+h4 {
+    .bold;
+    font-size: @l;
+}
 
-        .navbar-brand {
-            padding: 0;
-            margin-top: -18px;
+h5 {
+    .bold;
+    font-size: @m;
+}
+
+.h6,
+h6 {
+    .bold;
+    font-size: @s;
+}
+
+p {
+    .light;
+    font-size: @h;
+}
+
+.bg {
+    background-attachment: fixed;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transparent {
+    background: transparent !important;
+}
+
+@media (min-width: 1280px) {
+
+    .btns {
+        .radius(6px);
+        .bold;
+        padding: 11px 19px 11px 17px;
+        .transition(0.4s);
+        border: transparent;
+        background: @white;
+        color: @black;
+
+        &:hover {
+            background: @pink  !important;
+            color: @white;
         }
+    }
 
-        .navbar-nav {
+    .wrapper_full {
+        width: 100%;
+    }
+
+    .wrapper {
+        width: 1280px;
+    }
+
+    .plr150 {
+        padding: 0 150px;
+    }
+
+    header {
+        .transparent;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        z-index: 124;
+        .transform(translateX(-50%));
+        width: 1280px;
+
+        .pc-navbar {
             padding: 14px 0 19px;
+            display: flex;
+            align-items: center;
 
-            .nav-item {
-                .nav-link {
-                    padding: 18px 39px;
-                    font-family: Gilroy-ExtraBold;
-                    font-size: 14px;
-                    color: #272727;
-                    line-height: 1.2;
-                    .opacity(0.5);
-                    .transition(0.4s);
+            .logo {
+                float: left;
 
-                    &:hover {
-                        .opacity(1);
+                .logoNav {
+                    display: block;
+                }
+            }
+
+            .navbar {
+                float: right;
+                margin-right: 63px;
+                margin-left: auto;
+
+                .navItems {
+                    float: left;
+                    padding: 0 10px;
+
+                    .navLinks {
+                        width: 115px;
+                        line-height: 1.1;
+                        text-align: center;
+                        padding: 17px 0;
+                        .h6;
+                        display: block;
+                        color: #272727;
+                        .opacity(0.5);
+
+                        &:active {
+                            .opacity(1)
+                        }
+
+                        .navLinks.active {
+                            .opacity(1)
+                        }
+                    }
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+
+                    &:last-child {
+                        padding-right: 0;
                     }
                 }
             }
 
-            .nav-item.active {
-                .nav-link {
-                    .opacity(1);
+            .butns {
+                float: left;
+
+                .btnList {
+                    float: left;
+
+                    .btn {
+                        .btns;
+
+                        &:first-child {
+                            margin-right: 20px;
+                        }
+                    }
+
                 }
             }
         }
+    }
 
-        .btn-grp {
-            padding-left: 43px;
-
-            .btns {
-                float: left;
-                padding: 0 20px;
+    .hero-section {
+        position: relative;
+        
+        .hero-banner {
+            top: -23rem;
+            right: -33rem;
+            position: absolute;
+            width: 84%;
+            height: 647px;
+            img{
+                width: 90%;
+            }
+        }
+        
+        .contents{
+            .plr150;
+            padding-top: 233px;
+            width: 450px;
+            h5{
+                .opacity(0.6);
+                margin: 18px 0 23px;
+            }
+            .btn{
+                .btns;
+                text-transform: uppercase;
+                padding: 14px 40px;
+                text-align: center;
+                background: @pink !important;
+                color: @white;
+                
+                &:hover {
+                    .shadow(0px 8px 23px -10px rgba(0, 0, 0, 0.75));
+                }
+            }
+            .icons{
+                display: block;
+                margin-top: 175px;
+                font-size: 37px;
+                color: rgba(0, 0, 0, 0.2);
             }
         }
     }
+    .howItWork{
+        margin-top: 64px;
+        .plr150;
+        
+    }
 }
 
-.hero-section{
-    .hero-banner{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 730px;
-        height: 700px;
-    }
+.wrapper {
+    margin: 0 auto;
+}
+
+.img {
+    max-width: 100%;
+    height: auto
 }

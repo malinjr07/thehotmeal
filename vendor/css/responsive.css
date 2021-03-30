@@ -1,0 +1,16 @@
+@media (max-width: 999.99px) {
+  .dl-block {
+    display: none;
+  }
+  .ds-small {
+    display: block;
+  }
+}
+@media (min-width: 1000px) {
+  .dl-block {
+    display: block;
+  }
+  .ds-block {
+    display: none;
+  }
+}
